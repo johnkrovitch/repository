@@ -14,5 +14,15 @@
         "php": "^7.2",
         "doctrine/doctrine-bundle": "^1.0||^2.0",
         "doctrine/orm": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JK\\Repository\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "components",
+        "sort-packages": true
     }
 }

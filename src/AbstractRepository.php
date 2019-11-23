@@ -1,6 +1,6 @@
 <?php
 
-namespace JK\NotificationBundle\Repository;
+namespace JK\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\ArrayCollection;

@@ -1,6 +1,6 @@
 <?php
 
-namespace JK\NotificationBundle\Repository;
+namespace JK\Repository;
 
 interface RepositoryInterface
 {
