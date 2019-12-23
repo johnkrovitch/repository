@@ -16,17 +16,30 @@ abstract class AbstractRepository extends ServiceEntityRepository implements Rep
 
     public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null): Collection
     {
-        return new ArrayCollection(parent::findBy($criteria, $orderBy, $limit, $offset));
+        $results = parent::findBy($criteria, $orderBy, $limit, $offset);
+
+        return $this->createCollection($results);
     }
 
     public function findAll(): Collection
     {
-        return new ArrayCollection(parent::findAll());
+        $results = parent::findAll();
+
+        return $this->createCollection($results);
     }
 
     public function save($entity): void
     {
         $this->_em->persist($entity);
         $this->_em->flush();
+    }
+
+    protected function createCollection($results): Collection
+    {
+        if ($results instanceof Collection) {
+            return $results;
+        }
+
+        return new ArrayCollection($results);
     }
 }
