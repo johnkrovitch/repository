@@ -23,6 +23,6 @@
         "sort-packages": true
     },
     "require-dev": {
-        "symfony/orm-pack": "^1.0"
+        "symfony/orm-pack": "^2.0"
     }
 }
